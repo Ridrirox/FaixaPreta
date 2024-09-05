@@ -1,0 +1,70 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: gotham, arial, helvetica, sans-serif;
+  font-size: 18px;
+  padding: 0;
+    
+}
+
+
+@media only screen and (max-device-width: 700px) {
+/* .menu { width:400px; } */
+}
+
+.text {
+  position: absolute;
+  z-index: 1;
+  top: 50px; /* 50px de distância do topo */
+  left: 25px; /* 25px de distância da esquerda */
+  position: absolute;
+  transform: translate(-50%, -50%); /* tcharaaaaaannnnn */
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  
+  background-color: white;
+  padding: 1rem;
+}
+.container {
+  position: relative;
+}
+
+.image {
+  display: block;
+  width: 100%;
+}
+.elemento-pai {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.elemento-filho {
+  /* nothing */
+}
+
+.treinaWeb {
+  position: fixed;
+  top: 200px;
+  left: 400px;
+}
+.but { 
+  max-width: 500px;
+} 
+ .butT { 
+  max-width: 400px;
+} 
+  .imgwh { 
+   max-width: 50%;
+  padding: 1em;
+}
+#parallaxBar1{
+    height: 100% ;
+    background: url('https://lh3.googleusercontent.com/d/1qRDu9d9_g-99uuLSPnWiuEn9AMU10sPf');
+    position: relative; 
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

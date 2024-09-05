@@ -1,0 +1,103 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: gotham, arial, helvetica, sans-serif;
+  font-size: 18px;
+  padding: 0;
+    
+}
+
+
+@media only screen and (max-device-width: 700px) {
+/* .menu { width:400px; } */
+}
+
+.text {
+  position: absolute;
+  z-index: 1;
+  top: 50px; /* 50px de distância do topo */
+  left: 25px; /* 25px de distância da esquerda */
+  position: absolute;
+  transform: translate(-50%, -50%); /* tcharaaaaaannnnn */
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  
+  background-color: white;
+  padding: 1rem;
+}
+.container {
+  position: relative;
+}
+
+.image {
+  display: block;
+  width: 100%;
+}
+.elemento-pai {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.elemento-filho {
+  /* nothing */
+}
+
+.treinaWeb {
+  position: fixed;
+  top: 200px;
+  left: 400px;
+}
+.but { 
+  max-width: 1200px;
+} 
+ .butT { 
+  max-width: 700px;
+} 
+  .imgwh { 
+   max-width: 50%;
+  padding: 1em;
+}
+#parallaxBar1{
+    height: 100% ;
+    background: url('https://i.ibb.co/k8tJHFx/tae.png');
+    position: relative; 
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+ * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+
+      
+      .input {
+        background-color: #d4e8ff;
+        color: #06224a;
+        width: 500px;
+      }
+
+      .input:focus {
+        outline: none;
+      }
+
+     .button {
+  #background-color: #04AA6D; /* Green */
+  background-color: #06224a;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+    
+	.button:hover {
+        background-color: #010d1f;
+        transition: 0.3s;
+      }

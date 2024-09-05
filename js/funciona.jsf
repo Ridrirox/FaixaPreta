@@ -1,0 +1,136 @@
+
+function myFunction(bt) {
+         
+	 //Manda numero clicado para o formulario
+	  var x = document.getElementById(bt).innerText;  
+      document.getElementById("numero").value = parseInt(x, 10);
+      
+      //define o que enviar de acordo com o numero escolhido
+           if (x>0 && x<=100){
+    	    $("#fralda").text("Numeros selecionados entre 1 a 100 <> R$ 10,00");
+    	    document.getElementById("fraldaB").value = " R$ 10,00 ";
+       	   }
+    	   if (x>101 && x<=200){
+    	    $("#fralda").text("Numeros selecionados entre 101 a 200 <> R$ 15,00");
+    	    document.getElementById("fraldaB").value = " R$15,00 ";
+    	   }
+    	   if (x>201 && x<=300){
+    	    $("#fralda").text("Numeros selecionados entre 201 a 301 <> R$ 30,00");
+    	    document.getElementById("fraldaB").value = " R$ 30,00 ";
+    	   }
+		   
+		   if (x>301 && x<=313){
+    	    $("#fralda").text("Numeros selecionados entre 301 a 313 <> R$ 50,00");
+    	    document.getElementById("fraldaB").value = " R$ 50,00 ";
+    	   }
+		    
+		
+		   if (x>313 && x<=1313){
+    	    $("#fralda").text("Numeros selecionados entre 313 a 1313 <> R$ 150,00");
+    	    document.getElementById("fraldaB").value = " R$ 150,00 ";
+    	   }
+			
+		
+		   if (x>1313 && x<=500){
+    	    $("#fralda").text("Numeros selecionados entre 1313 a 500 <> R$ 200,00");
+    	    document.getElementById("fraldaB").value = " R$ 20,00 ";
+    	   }
+			
+			
+			
+						
+		
+     //atualiza os numeros
+ /*    
+$.ajax({
+     async: false,
+     type: 'GET',
+     url: 
+     */
+ jQuery.ajaxSetup({async:false});
+$.get("https://script.google.com/macros/s/AKfycbzbDf8Itk_gzwL93Q88ZYzyWAlZGbTPqZFz-t-8K4MkDoEFuwXiqBtenMpmN1jKmyL7GA/exec",
+	function(data) {   					
+		for(var i = 0; i < 5001; i++) {   
+			var obj = data.user[i];      
+						  //console.log(obj.id);
+						  //alert(obj.numeto);
+			if (Number.isInteger(obj.numero)){  
+				var element= document.getElementById("btn"+i); 
+				if (typeof(element)!= 'undefined' && element!=null){
+					$("#"+"btn"+(obj.numero-1)).addClass("btn btn-danger").prop('disabled', true)
+				}
+			}
+		} 
+			 alert('status');
+			 }).fail(
+		function() {  
+			
+			//alert("Erro ao atualizar os números, tente mais tarde");
+			$("#div1").remove();
+			alert("Erro ao atualizar os números, tente mais tarde");
+			location.reload();
+		} 
+		); 
+		
+		 //alert("\nStatus: " + status);		        
+ //tentando bloquear numero ja escolhido
+     if ($("#"+bt).hasClass("btn-danger")){
+	   alert("Este número ja foi escolhido, por favor selecione outro!")
+	 
+	  }else{ 
+		      $("#exampleModal").modal();
+		  }
+
+
+         /* Manda no texto do modal o que é preciso mandar para concorrer a rifa*/
+            
+       jQuery.ajaxSetup({async:true});
+
+};
+
+$(document).ready(function(){
+	 $window = $(window);
+    //Captura cada elemento section com o data-type "background"
+    $('section[data-type="background"]').each(function(){
+        var $scroll = $(this);   
+            //Captura o evento scroll do navegador e modifica o backgroundPosition de acordo com seu deslocamento.            
+            $(window).scroll(function() {
+                var yPos = -($window.scrollTop() / $scroll.data('speed')); 
+                var coords = '90% '+ yPos + 'px';
+                $scroll.css({ backgroundPosition: coords });    
+            });
+   });  
+   
+      //https://script.google.com/macros/s/AKfycbw3lFB4by9SJrGg2MITKL76IpcMKtF073Q8tcRTZd8Hl4Yym374QEx9nRrFWCXzfpQf5A/exec
+
+      //--// Usado na Rifa Bebe_Tainara //--$.get("https://script.google.com/macros/s/AKfycbyRSyyvaCMCQMEtB5buEgROJWM_1kluMO-2bJGyj-iCjC5IxVjIifyk5pQKyun9p029pA/exec",
+	  
+	  //
+	  
+	  $.get("https://script.google.com/macros/s/AKfycbzbDf8Itk_gzwL93Q88ZYzyWAlZGbTPqZFz-t-8K4MkDoEFuwXiqBtenMpmN1jKmyL7GA/exec",
+   
+   //---- $.get("https://script.google.com/macros/s/AKfycbzS12-BKpeegY3rjHS79Ire-xkYr4yLy_ed2Bs2tlc7CcmpAjkK/exec",
+	function(data) {   
+					  //alert("a");
+		for(var i = 0; i < 5001; i++) {   
+			//apos encerar o tempo $("#"+"btn"+i).prop('disabled', true);  
+			var obj = data.user[i];      
+						  //console.log(obj.id);
+			if (Number.isInteger(obj.numero)){  
+				//alert(obj.id)
+				var element= document.getElementById("btn"+i); 
+				if (typeof(element)!= 'undefined' && element!=null){
+					$("#"+"btn"+(obj.numero-1)).addClass("btn btn-danger").prop('disabled', true);
+					//alert(obj.numero)
+				}
+			}
+		} 
+	}).fail(
+		function() {  
+			alert("Erro ao atualizar os números, tente mais tarde");
+			$("#div1").remove()
+			 //$(#div1).addClass("page-item disabled")
+		} 
+		); 
+  }
+);
