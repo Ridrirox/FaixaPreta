@@ -66,9 +66,14 @@
 }
 
 .destaques__secundario:nth-child(5) {
-    background: url('https://i.ibb.co/qJdTHwq/tkd-imagem-ai-mx.webp') center / cover no-repeat;
+
+    
+    background: url('https://i.ibb.co/PmxRh5T/pc-gamer.png') center / cover no-repeat;
 /*  grid-column: 3 / 3; já está no responsivo.css é o que muda de acordo com o tamanho das telas
-    grid-row: 3 / 3; */
+    grid-row: 3 / 3;
+    https://i.ibb.co/qJdTHwq/tkd-imagem-ai-mx.web
+
+*/
 }
 
 .destaques__categorias {
